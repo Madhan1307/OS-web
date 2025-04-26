@@ -4,7 +4,6 @@ import Products from "@/components/products";
 import Pricing from "@/components/pricing";
 import { Footer } from "@/components/ui/footer";
 import { Twitter, Linkedin , Instagram } from "lucide-react";
-import Image from "next/image";
 export default function Home() {
   return (
     <>
