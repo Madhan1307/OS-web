@@ -226,9 +226,7 @@ export default function TermsOfService() {
           },
         ]}
         mainLinks={[
-          { href: "/", label: "Home" },
-          { href: "/about", label: "About" },
-          { href: "/contact", label: "Contact" }
+          { href: "/contact", label: "Contact Us" }
         ]}
         legalLinks={[
           { href: "/privacy-policy", label: "Privacy Policy" },

@@ -7,9 +7,9 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
-    { name: 'Products', href: '#link' },
-    { name: 'How it works', href: '#link' },
-    { name: 'Pricing', href: '#link' },
+    { name: 'Products', href: '#products' },
+    { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Company', href: '#link' },
 ]
 

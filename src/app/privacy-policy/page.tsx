@@ -175,9 +175,8 @@ export default function PrivacyPolicy() {
           },
         ]}
         mainLinks={[
-          { href: "/", label: "Home" },
-          { href: "/about", label: "About" },
-          { href: "/contact", label: "Contact" }
+      
+          { href: "/contact", label: "Contact Us" }
         ]}
         legalLinks={[
           { href: "/privacy-policy", label: "Privacy Policy" },

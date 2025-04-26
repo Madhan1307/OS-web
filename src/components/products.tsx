@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function WallOfLoveSection() {
   return (
-    <section className=" py-16 md:py-32 ">
+    <section id="products" className=" py-16 md:py-32 ">
       <div className="@container mx-auto max-w-6xl px-8">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">

@@ -1,6 +1,6 @@
 import HeroSection from "@/components/hero-section";
 import Features1 from "@/components/features-1";
-import Testimonials from "@/components/testimonials";
+import Products from "@/components/products";
 import Pricing from "@/components/pricing";
 import { Footer } from "@/components/ui/footer";
 import { Twitter, Linkedin , Instagram } from "lucide-react";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Testimonials />
+      <Products />
       <Features1 />
       <Pricing />
       <Footer 
@@ -32,19 +32,15 @@ export default function Home() {
           }
         ]}
         mainLinks={[
-          { href: "/about", label: "About" },
-          { href: "/features", label: "Features" },
-          { href: "/pricing", label: "Pricing" },
-          { href: "/contact", label: "Contact" }
+          { href: "#products", label: "Products" },
+          { href: "#features", label: "Features" },
+          { href: "#pricing", label: "Pricing" },
+          { href: "/contact", label: "Contact-Us" }
         ]}
         legalLinks={[
           { href: "/privacy-policy", label: "Privacy Policy" },
           { href: "/terms-of-service", label: "Terms of Service" }
         ]}
-        copyright={{
-          text: "© 2025 OutreachSheet. All rights reserved.",
-          license: "Licensed under MIT."
-        }}
       />
 
     </>

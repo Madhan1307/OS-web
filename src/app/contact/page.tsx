@@ -125,8 +125,7 @@ export default function Contact() {
         ]}
         mainLinks={[
           { href: "/", label: "Home" },
-          { href: "/about", label: "About" },
-          { href: "/contact", label: "Contact" }
+
         ]}
         legalLinks={[
           { href: "/privacy-policy", label: "Privacy Policy" },
