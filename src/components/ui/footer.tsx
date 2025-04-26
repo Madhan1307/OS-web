@@ -25,7 +25,7 @@ export function Footer({
   legalLinks,
 }: FooterProps) {
   return (
-    <footer className="pb-6 pt-16 lg:pb-8 lg:pt-24 ">
+    <footer className="pb-6 pt-16 lg:pb-8 lg:pt-24 " style={{backgroundColor: "#F8F9F8"}}>
       <div className="px-4 lg:px-8">
         <div className="md:flex  md:flex-col">
           <Link
@@ -45,12 +45,12 @@ export function Footer({
             <ul className="list-none flex flex-wrap -my-1 -mx-2 ">
               {mainLinks.map((link, i) => (
                 <li key={i} className="my-1 mx-2 shrink-0">
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-primary underline-offset-4 hover:underline"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -62,13 +62,14 @@ export function Footer({
           <div className="mt-6 lg:mt-0 lg:col-[4/11]">
             <ul className="list-none flex flex-wrap -my-1 -mx-3 lg:justify-end">
               {legalLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-3 shrink-0">
-                  <a
+                
+                <li key={i} className="my-1 mx-3 shrink-0 ">
+                  <Link
                     href={link.href}
                     className="text-sm text-muted-foreground underline-offset-4 hover:underline"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

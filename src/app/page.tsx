@@ -3,7 +3,7 @@ import Features1 from "@/components/features-1";
 import Testimonials from "@/components/testimonials";
 import Pricing from "@/components/pricing";
 import { Footer } from "@/components/ui/footer";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Twitter, Linkedin , Instagram } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
   return (
@@ -13,23 +13,22 @@ export default function Home() {
       <Features1 />
       <Pricing />
       <Footer 
-        logo={<Image src="/logo.svg" alt="Logo" width={32} height={32} />}
-        brandName="Your Brand"
+        brandName="OutreachSheet"
         socialLinks={[
           {
-            icon: <Github className="h-5 w-5" />,
-            href: "https://github.com",
-            label: "GitHub"
+            icon: <Linkedin className="h-5 w-5" />,
+            href: "https://linkedin.com",
+            label: "LinkedIn"
+          },
+          {
+            icon: <Instagram className="h-5 w-5" />,
+            href: "https://www.instagram.com/outreachsheetglobal?igsh=MTg4ZHdxa3hnYmI2YQ==",
+            label: "Instagram"
           },
           {
             icon: <Twitter className="h-5 w-5" />,
             href: "https://twitter.com",
             label: "Twitter"
-          },
-          {
-            icon: <Linkedin className="h-5 w-5" />,
-            href: "https://linkedin.com",
-            label: "LinkedIn"
           }
         ]}
         mainLinks={[
@@ -39,11 +38,11 @@ export default function Home() {
           { href: "/contact", label: "Contact" }
         ]}
         legalLinks={[
-          { href: "/privacy", label: "Privacy Policy" },
-          { href: "/terms", label: "Terms of Service" }
+          { href: "/privacy-policy", label: "Privacy Policy" },
+          { href: "/terms-of-service", label: "Terms of Service" }
         ]}
         copyright={{
-          text: "© 2025 Your Brand. All rights reserved.",
+          text: "© 2025 OutreachSheet. All rights reserved.",
           license: "Licensed under MIT."
         }}
       />
