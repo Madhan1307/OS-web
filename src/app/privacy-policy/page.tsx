@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="mb-8">
-          <p className="text-gray-600 mb-4">Updated April 26, 2025</p>
+          <p className="text-gray-600 mb-4">Updated May 1, 2025</p>
         </div>
 
         <div className="space-y-8 text-gray-600">
@@ -150,6 +150,87 @@ export default function PrivacyPolicy() {
             <p>
               If you have questions or concerns about this Privacy Policy or our data practices, please contact us at <a href="mailto:info@outreachsheet.com" className="text-blue-600 hover:underline">info@outreachsheet.com</a>.
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Google User Data Handling</h2>
+            <div className="space-y-8">
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">1. Google User Data Collection</h3>
+                <p className="mb-4">Our Google Sheets Add-on specifically accesses and processes the following Google user data:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2">
+                  <li>Google Sheets data and content - to provide spreadsheet functionality</li>
+                  <li>Google Drive scope - to access and modify your spreadsheets</li>
+                  <li>User profile information - to identify the current user</li>
+                  <li>Add-on preferences and settings - stored in Chrome storage</li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">2. Use of Google User Data</h3>
+                <p className="mb-4">We use the collected Google user data strictly for the following purposes:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2">
+                  <li>To provide core spreadsheet manipulation functionality within Google Sheets</li>
+                  <li>To save and retrieve user preferences and settings</li>
+                  <li>To authenticate users and maintain user sessions</li>
+                  <li>To process spreadsheet data according to user requests</li>
+                  <li>To improve the add-on&apos;s functionality and user experience</li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">3. Data Sharing and Transfer</h3>
+                <p className="mb-4">We maintain strict control over Google user data and:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2">
+                  <li>Do not sell or rent Google user data to any third parties</li>
+                  <li>Do not share Google user data with any external services or analytics providers</li>
+                  <li>Only process data within the user&apos;s browser environment</li>
+                  <li>May only disclose data if required by law, with user consent, or to protect our rights</li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">4. Data Protection Mechanisms</h3>
+                <p className="mb-4">We implement comprehensive security measures to protect Google user data:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2">
+                  <li>End-to-end encryption for all data transmissions</li>
+                  <li>Secure local storage using Chrome&apos;s built-in storage APIs</li>
+                  <li>Regular security audits and vulnerability assessments</li>
+                  <li>Access controls and authentication mechanisms</li>
+                  <li>No external server storage - all processing happens locally</li>
+                  <li>Compliance with Google&apos;s security requirements for Add-ons</li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">5. Data Retention and Deletion</h3>
+                <p className="mb-4">Our data retention and deletion policies for Google user data:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2">
+                  <li>User data is only stored locally during active use of the add-on</li>
+                  <li>All Google user data is automatically deleted when the add-on is uninstalled</li>
+                  <li>Users can manually clear their data through the add-on settings at any time</li>
+                  <li>No persistent storage of spreadsheet data - only processed during active operations</li>
+                  <li>User preferences are retained only while the add-on is installed</li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">6. User Rights</h3>
+                <p className="mb-4">As a user of our add-on, you have the following rights regarding your Google user data:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2">
+                  <li>Right to access your data through the add-on settings</li>
+                  <li>Right to delete your data at any time</li>
+                  <li>Right to restrict or opt-out of data collection</li>
+                  <li>Right to uninstall the add-on, which removes all associated data</li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">7. Contact Information</h3>
+                <p className="mb-4">For any questions or concerns about this Privacy Policy or our handling of Google user data, please contact us at:</p>
+                <p className="mb-4">Email: <a href="mailto:info@outreachsheet.com" className="text-blue-600 hover:underline">info@outreachsheet.com</a></p>
+              </div>
+            </div>
           </section>
         </div>
 

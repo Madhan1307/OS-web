@@ -36,6 +36,7 @@ const Page: React.FC = () => {
 
   return (
     <>
+    
       <div className='min-h-screen bg-gray-100'>
         <HeroHeader />
         <div className="flex relative pt-24 md:pt-36">
