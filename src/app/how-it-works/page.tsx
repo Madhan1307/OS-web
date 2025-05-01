@@ -1,7 +1,16 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import { HeroHeader } from "@/components/hero5-header";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
+  const [loading, setLoading] = useState({
+    start: true,
+    multiple: true,
+    people: true,
+    single: true
+  });
+
   return (
     <>
       <div className='min-h-screen bg-gray-100'>
@@ -20,50 +29,73 @@ const page: React.FC = () => {
           <div className="fixed right-0 w-[75%] h-[calc(100vh-64px)] overflow-y-auto p-6 bg-white flex flex-col gap-4">
             <div id="start-outreachsheet">
               <h1 className="text-3xl font-bold mb-4 py-4">How I start with OutreachSheet?</h1>
+              {loading.start && (
+                <div className="flex justify-center items-center h-[600px] bg-gray-50">
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
+                </div>
+              )}
               <iframe 
                 src="https://scribehow.com/embed/How_to_Download_OutreachSheet_Extension__7Jz6DQkDRgaS_UdwD1nIhA?as=scrollable" 
                 width="100%" 
                 height="600px"
                 allowFullScreen
-                style={{border: 0}}
+                style={{border: 0, display: loading.start ? 'none' : 'block'}}
+                onLoad={() => setLoading(prev => ({ ...prev, start: false }))}
               />  
             </div>
             <div id="fetch-multiple-profiles">     
               <h1 className="text-3xl font-bold mb-4 py-4">How can I fetch multiple profiles from Sales Navigator search in bulk?</h1>
+              {loading.multiple && (
+                <div className="flex justify-center items-center h-[600px] bg-gray-50">
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
+                </div>
+              )}
               <iframe 
                 src="https://scribehow.com/embed/How_can_I_fetch_multiple_profiles_from_Sales_Navigator_search_in_bulk__bJGyYAPaRdWfvS90HfraZQ?as=scrollable" 
                 width="100%" 
                 height="600px"
                 allowFullScreen
-                style={{border: 0}}
+                style={{border: 0, display: loading.multiple ? 'none' : 'block'}}
+                onLoad={() => setLoading(prev => ({ ...prev, multiple: false }))}
               />  
             </div>
             <div id="fetch-people-linkedin">
               <h1 className="text-3xl font-bold mb-4 py-4">How can I fetch people from LinkedIn?</h1>
+              {loading.people && (
+                <div className="flex justify-center items-center h-[600px] bg-gray-50">
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
+                </div>
+              )}
               <iframe 
                 src="https://scribehow.com/embed/How_can_I_fetch_people_from_Linkedin__oR-_vQ-lRsG2g3zlk5rHig?as=scrollable" 
                 width="100%" 
                 height="600px"
                 allowFullScreen
-                style={{border: 0}}
+                style={{border: 0, display: loading.people ? 'none' : 'block'}}
+                onLoad={() => setLoading(prev => ({ ...prev, people: false }))}
               />  
             </div>
             <div id="fetch-single-linkedin-profile">
               <h1 className="text-3xl font-bold mb-4 py-4">How can I fetch a single LinkedIn profile?</h1>
+              {loading.single && (
+                <div className="flex justify-center items-center h-[600px] bg-gray-50">
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
+                </div>
+              )}
               <iframe 
                 src="https://scribehow.com/embed/How_can_I_fetch_a_single_LinkedIn_profile___qkekGXESfGS5s3D5jDvsg?as=scrollable" 
                 width="100%" 
                 height="600px"
                 allowFullScreen
-                style={{border: 0}}
+                style={{border: 0, display: loading.single ? 'none' : 'block'}}
+                onLoad={() => setLoading(prev => ({ ...prev, single: false }))}
               />  
             </div>
-          
-            </div>
+          </div>
         </div>
       </div>
     </> 
   )
 }
 
-export default page
+export default Page
