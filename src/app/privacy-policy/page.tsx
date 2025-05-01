@@ -7,6 +7,7 @@ export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen">
       <HeroHeader />
+      
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="text-center mb-12 mt-24">
           <h2 className="text-gray-600 mb-4 inline-block px-6 py-2 bg-gray-50 rounded-full">Privacy Policy</h2>
