@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { HeroHeader } from "@/components/hero5-header";
 
 const Page: React.FC = () => {
@@ -10,6 +10,29 @@ const Page: React.FC = () => {
     people: true,
     single: true
   });
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['start-outreachsheet', 'fetch-multiple-profiles', 'fetch-people-linkedin', 'fetch-single-linkedin-profile'];
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -19,13 +42,48 @@ const Page: React.FC = () => {
           <div className="w-[25%] h-[calc(100vh-64px)] bg-gray-100 fixed left-0 overflow-y-auto p-8">
             <h3 className="text-lg font-semibold mb-4">Related articles</h3>
             <nav className="space-y-2">
-            <a href="#start-outreachsheet" className="block text-gray-700 hover:text-blue-600">How can I start with OutreachSheet?</a>
-              <a href="#fetch-multiple-profiles" className="block text-gray-700 hover:text-blue-600">How can I fetch multiple profiles from Sales Navigator search in bulk?</a>
-              <a href="#fetch-people-linkedin" className="block text-gray-700 hover:text-blue-600">How can I fetch people from LinkedIn?</a>
-              <a href="#fetch-single-linkedin-profile" className="block text-gray-700 hover:text-blue-600">How can I fetch a single LinkedIn profile?</a>
+              <a 
+                href="#start-outreachsheet" 
+                className={`block px-3 py-2 rounded-lg transition-all ${
+                  activeSection === 'start-outreachsheet' 
+                  ? 'text-[#0F9D58] font-medium bg-[#0F9D58]/10' 
+                  : 'text-gray-700 hover:text-[#0F9D58] hover:bg-[#0F9D58]/5'
+                }`}
+              >
+                How can I start with OutreachSheet?
+              </a>
+              <a 
+                href="#fetch-multiple-profiles" 
+                className={`block px-3 py-2 rounded-lg transition-all ${
+                  activeSection === 'fetch-multiple-profiles' 
+                  ? 'text-[#0F9D58] font-medium bg-[#0F9D58]/10' 
+                  : 'text-gray-700 hover:text-[#0F9D58] hover:bg-[#0F9D58]/5'
+                }`}
+              >
+                How can I fetch multiple profiles from Sales Navigator search in bulk?
+              </a>
+              <a 
+                href="#fetch-people-linkedin" 
+                className={`block px-3 py-2 rounded-lg transition-all ${
+                  activeSection === 'fetch-people-linkedin' 
+                  ? 'text-[#0F9D58] font-medium bg-[#0F9D58]/10' 
+                  : 'text-gray-700 hover:text-[#0F9D58] hover:bg-[#0F9D58]/5'
+                }`}
+              >
+                How can I fetch people from LinkedIn?
+              </a>
+              <a 
+                href="#fetch-single-linkedin-profile" 
+                className={`block px-3 py-2 rounded-lg transition-all ${
+                  activeSection === 'fetch-single-linkedin-profile' 
+                  ? 'text-[#0F9D58] font-medium bg-[#0F9D58]/10' 
+                  : 'text-gray-700 hover:text-[#0F9D58] hover:bg-[#0F9D58]/5'
+                }`}
+              >
+                How can I fetch a single LinkedIn profile?
+              </a>
             </nav>
           </div>
-          
           <div className="fixed right-0 w-[75%] h-[calc(100vh-64px)] overflow-y-auto p-6 bg-white flex flex-col gap-4">
             <div id="start-outreachsheet">
               <h1 className="text-3xl font-bold mb-4 py-4">How I start with OutreachSheet?</h1>
