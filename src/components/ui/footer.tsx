@@ -25,7 +25,10 @@ export function Footer({
   legalLinks,
 }: FooterProps) {
   return (
-    <footer className="pb-6 pt-16 lg:pb-8 lg:pt-24 " style={{backgroundColor: "#F8F9F8"}}>
+    <footer
+      className="pb-6 pt-16 lg:pb-8 lg:pt-24 w-full min-w-full"
+      style={{ backgroundColor: "#F8F9F8" }}
+    >
       <div className="px-4 lg:px-8">
         <div className="md:flex  md:flex-col">
           <Link
@@ -35,34 +38,34 @@ export function Footer({
           >
             <Logo />
           </Link>
-          <h1 className="text-2xl font-bold mt-14 mb-6">Let’s Connect and Collaborate!</h1>
+          <h1 className="text-2xl font-bold mt-14 mb-6">
+            Let’s Connect and Collaborate!
+          </h1>
           <div className="md:flex md:justify-between">
-          <p className="w-1/3">
-            We’re excite to hear about your vision and explore how we can bring
-            it to life together
-          </p>
-          <nav className="">
-            <ul className="list-none flex flex-wrap -my-1 -mx-2 ">
-              {mainLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-2 shrink-0">
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary underline-offset-4 hover:underline"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+            <p className="w-1/3">
+              We’re excite to hear about your vision and explore how we can
+              bring it to life together
+            </p>
+            <nav className="">
+              <ul className="list-none flex flex-wrap -my-1 -mx-2 ">
+                {mainLinks.map((link, i) => (
+                  <li key={i} className="my-1 mx-2 shrink-0">
+                    <Link
+                      href={link.href}
+                      className="text-sm text-primary underline-offset-4 hover:underline"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
-          
         </div>
         <div className="border-t mt-6 pt-6 md:mt-4 md:pt-8 lg:grid lg:grid-cols-10">
           <div className="mt-6 lg:mt-0 lg:col-[4/11]">
             <ul className="list-none flex flex-wrap -my-1 -mx-3 lg:justify-end">
               {legalLinks.map((link, i) => (
-                
                 <li key={i} className="my-1 mx-3 shrink-0 ">
                   <Link
                     href={link.href}
@@ -84,7 +87,12 @@ export function Footer({
                     className="h-10 w-10 rounded-full"
                     asChild
                   >
-                    <a style={{backgroundColor: "#0F9D58", color: "white"}} href={link.href} target="_blank" aria-label={link.label}>
+                    <a
+                      style={{ backgroundColor: "#0F9D58", color: "white" }}
+                      href={link.href}
+                      target="_blank"
+                      aria-label={link.label}
+                    >
                       {link.icon}
                     </a>
                   </Button>
