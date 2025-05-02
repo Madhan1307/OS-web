@@ -36,7 +36,7 @@ const Page: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call once on mount
+    handleScroll(); 
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
