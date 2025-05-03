@@ -71,8 +71,8 @@ const Page: React.FC = () => {
       <div className="min-h-screen bg-gray-100">
         <HeroHeader />
         <div className="flex flex-col">
-          <div className="flex pt-24 md:pt-36">
-            <div className="w-[25%] bg-gray-100 p-8 sticky top-28 h-[calc(100vh-64px)]">
+          <div className="flex flex-col lg:flex-row pt-24 md:pt-36">
+            <div className="w-full lg:w-[25%] bg-gray-100 p-4 lg:p-8 sticky top-28 h-auto lg:h-[calc(100vh-64px)] overflow-y-auto">
               <h3 className="text-lg font-semibold mb-4">Related articles</h3>
               <nav className="space-y-2">
                 <a
@@ -118,10 +118,10 @@ const Page: React.FC = () => {
                 </a>
               </nav>
             </div>
-            <div className="w-[75%] bg-white ">
+            <div className="w-full lg:w-[75%] bg-white rounded-lg">
               <div className="p-6 flex flex-col gap-4">
                 <div id="start-outreachsheet">
-                  <h1 className="text-3xl font-bold mb-4 py-4">
+                  <h1 className="text-lg font-bold mb-4 py-8">
                     How I start with OutreachSheet?
                   </h1>
                   {loading.start && (
@@ -144,7 +144,7 @@ const Page: React.FC = () => {
                   />
                 </div>
                 <div id="fetch-multiple-profiles">
-                  <h1 className="text-3xl font-bold mb-4 py-4">
+                  <h1 className="text-lg font-bold mb-4 py-12">
                     How can I fetch multiple profiles from Sales Navigator
                     search in bulk?
                   </h1>
@@ -168,7 +168,7 @@ const Page: React.FC = () => {
                   />
                 </div>
                 <div id="fetch-people-linkedin">
-                  <h1 className="text-3xl font-bold mb-4 py-4">
+                  <h1 className="text-lg font-bold mb-4 py-12">
                     How can I fetch people from LinkedIn?
                   </h1>
                   {loading.people && (
@@ -191,7 +191,7 @@ const Page: React.FC = () => {
                   />
                 </div>
                 <div id="fetch-single-linkedin-profile">
-                  <h1 className="text-3xl font-bold mb-4 py-4">
+                  <h1 className="text-lg font-bold mb-4 py-12">
                     How can I fetch a single LinkedIn profile?
                   </h1>
                   {loading.single && (

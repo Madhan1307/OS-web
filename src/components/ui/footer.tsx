@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Logo } from "../logo";
+
 interface FooterProps {
   brandName: "OutreachSheet";
   socialLinks: Array<{
@@ -30,26 +31,26 @@ export function Footer({
       style={{ backgroundColor: "#F8F9F8" }}
     >
       <div className="px-4 lg:px-8">
-        <div className="md:flex  md:flex-col">
+        <div className="flex flex-col">
           <Link
             href="/"
-            className="md:flex items-center gap-x-2"
+            className="flex items-center gap-x-2"
             aria-label={brandName}
           >
             <Logo />
           </Link>
-          <h1 className="text-2xl font-bold mt-14 mb-6">
-            Let’s Connect and Collaborate!
+          <h1 className="text-xl lg:text-2xl font-bold mt-10 lg:mt-14 mb-4 lg:mb-6">
+            Let&apos;s Connect and Collaborate!
           </h1>
-          <div className="md:flex md:justify-between">
-            <p className="w-1/3">
-              We’re excite to hear about your vision and explore how we can
+          <div className="flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-8">
+            <p className="w-full lg:w-1/3 text-sm lg:text-base">
+              We&apos;re excite to hear about your vision and explore how we can
               bring it to life together
             </p>
-            <nav className="">
-              <ul className="list-none flex flex-wrap -my-1 -mx-2 ">
+            <nav className="w-full lg:w-auto">
+              <ul className="list-none flex flex-wrap gap-4">
                 {mainLinks.map((link, i) => (
-                  <li key={i} className="my-1 mx-2 shrink-0">
+                  <li key={i} className="shrink-0">
                     <Link
                       href={link.href}
                       className="text-sm text-primary underline-offset-4 hover:underline"
@@ -62,11 +63,11 @@ export function Footer({
             </nav>
           </div>
         </div>
-        <div className="border-t mt-6 pt-6 md:mt-4 md:pt-8 lg:grid lg:grid-cols-10">
-          <div className="mt-6 lg:mt-0 lg:col-[4/11]">
-            <ul className="list-none flex flex-wrap -my-1 -mx-3 lg:justify-end">
+        <div className="border-t mt-6 pt-6 md:mt-8 md:pt-8 flex flex-col lg:grid lg:grid-cols-10 gap-6 lg:gap-0">
+          <div className="order-2 lg:order-1 lg:mt-0 lg:col-[4/11]">
+            <ul className="list-none flex flex-wrap gap-4 lg:justify-end">
               {legalLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-3 shrink-0 ">
+                <li key={i} className="shrink-0 ">
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground underline-offset-4 hover:underline"
@@ -77,8 +78,8 @@ export function Footer({
               ))}
             </ul>
           </div>
-          <div className="mt-6 text-sm leading-6 text-muted-foreground whitespace-nowrap lg:mt-0 lg:row-[1/3] lg:col-[1/4]">
-            <ul className="flex list-none mt-6 md:mt-0 space-x-3">
+          <div className="order-1 lg:order-2 text-sm leading-6 text-muted-foreground lg:mt-0 lg:row-[1/3] lg:col-[1/4]">
+            <ul className="flex list-none space-x-3">
               {socialLinks.map((link, i) => (
                 <li key={i}>
                   <Button
